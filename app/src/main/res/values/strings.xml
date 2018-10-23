@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Medical Helper</string>
+
+    <string name="estimated_date_of_delivery_edd_pregnancy_calculator">
+        Estimated Date of Delivery (EDD) Pregnancy Calculator</string>
+    <string name="current_date">Current Date</string>
+    <string name="last_menstrual_period">Last Menstrual Period</string>
+    <string name="ultrasound_date">Ultrasound Date</string>
+    <string name="gestational_age_by_us">Gestational Age by US</string>
+    <string name="embryo_transfer_date">Embryo Transfer Date</string>
+    <string name="embryo_age_at_transfer_date">Embryo Age at Transfer Date</string>
+    <string name="results">Results</string>
+    <string name="current_gestational_age_by_lmp">Current Gestational Age by LMP</string>
+    <string name="edd_by_lmp">EDD by LMP</string>
+    <string name="current_gestational_age_by_us">Current Gestational Age by US</string>
+    <string name="edd_by_us">EDD by US</string>
+    <string name="current_gestational_age_by_embryo">Current Gestational Age by Embryo</string>
+    <string name="edd_by_embryo">EDD by Embryo</string>
+
+    <!-- Value -->
+    <string name="not_available">Not Available</string>
+
+    <!-- Date/Time -->
+    <string name="weeks">weeks</string>
+    <string name="days">days</string>
+
+    <!-- Plurals -->
+    <plurals name="number_of_weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">week</item>
+        <item quantity="other">weeks</item>
+    </plurals>
+    <plurals name="number_of_days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+
+    <!-- Format -->
+    <string name="display_date_format">DD/MM/YYYY</string>
+    <string name="sql_date_format">YYYY-MM-DD</string>
+</resources>

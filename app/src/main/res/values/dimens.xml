@@ -1,0 +1,34 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">@dimen/normal_100</dimen>
+    <dimen name="activity_vertical_margin">@dimen/normal_100</dimen>
+    <dimen name="scroll_view_horizontal_margin">@dimen/normal_100</dimen>
+    <dimen name="scroll_view_vertical_margin">@dimen/normal_100</dimen>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">@dimen/normal_100</dimen>
+    <dimen name="text_margin">@dimen/normal_100</dimen>
+
+    <!-- Text Size -->
+    <dimen name="small_50">4sp</dimen>
+    <dimen name="small_100">8sp</dimen>
+
+    <dimen name="normal_100">16sp</dimen>
+    <dimen name="normal_125">20sp</dimen>
+    <dimen name="normal_150">24sp</dimen>
+    <dimen name="normal_175">28sp</dimen>
+    <dimen name="normal_200">32sp</dimen>
+    <dimen name="normal_225">36sp</dimen>
+    <dimen name="normal_250">40sp</dimen>
+    <dimen name="normal_275">44sp</dimen>
+    <dimen name="normal_300">48sp</dimen>
+    <dimen name="normal_325">52sp</dimen>
+    <dimen name="normal_350">56sp</dimen>
+    <dimen name="normal_375">60sp</dimen>
+    <dimen name="normal_400">64sp</dimen>
+
+    <dimen name="large_100">32sp</dimen>
+    <dimen name="large_125">40sp</dimen>
+    <dimen name="large_150">48sp</dimen>
+    <dimen name="large_175">56sp</dimen>
+    <dimen name="large_200">64sp</dimen>
+</resources>

@@ -1,0 +1,126 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Text"></style>
+
+    <style name="Text.Header1">
+        <item name="android:textSize">@dimen/normal_200</item>
+    </style>
+
+    <style name="Text.Header1.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text.Header1.ColorPrimaryDark">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Text.Header1.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Header2">
+        <item name="android:textSize">@dimen/normal_175</item>
+    </style>
+
+    <style name="Text.Header2.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text.Header2.ColorPrimaryDark">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Text.Header2.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Header3">
+        <item name="android:textSize">@dimen/normal_150</item>
+    </style>
+
+    <style name="Text.Header3.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text.Header3.ColorPrimaryDark">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Text.Header3.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Header4">
+        <item name="android:textSize">@dimen/normal_125</item>
+    </style>
+
+    <style name="Text.Header4.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text.Header4.ColorPrimaryDark">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Text.Header4.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Body">
+        <item name="android:textSize">@dimen/normal_100</item>
+    </style>
+
+    <style name="Text.Body.ColorPrimary">
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text.Body.ColorPrimaryDark">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="Text.Body.ColorAccent">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Body.BlackOverlay">
+        <item name="android:textColor">@color/black_overlay</item>
+    </style>
+
+    <!-- Scroll View and alike -->
+    <style name="ScrollView">
+        <item name="android:layout_marginTop">@dimen/scroll_view_vertical_margin</item>
+        <item name="android:layout_marginBottom">@dimen/scroll_view_vertical_margin</item>
+        <item name="android:layout_marginLeft">@dimen/scroll_view_horizontal_margin</item>
+        <item name="android:layout_marginRight">@dimen/scroll_view_horizontal_margin</item>
+    </style>
+
+</resources>
