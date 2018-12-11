@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Medical Helper</string>
+    <string name="app_name">Gestational Age Calculator</string>
 
     <string name="estimated_date_of_delivery_edd_pregnancy_calculator">
         Estimated Date of Delivery (EDD) Pregnancy Calculator</string>
@@ -14,8 +14,8 @@
     <string name="edd_by_lmp">EDD by LMP</string>
     <string name="current_gestational_age_by_us">Current Gestational Age by US</string>
     <string name="edd_by_us">EDD by US</string>
-    <string name="current_gestational_age_by_embryo">Current Gestational Age by Embryo</string>
-    <string name="edd_by_embryo">EDD by Embryo</string>
+    <string name="current_gestational_age_by_embryo">Current Gestational Age by Embryo Transfer Date</string>
+    <string name="edd_by_embryo">EDD by Embryo Transfer Date</string>
 
     <!-- Value -->
     <string name="not_available">Not Available</string>
