@@ -45,4 +45,5 @@
     <!-- Format -->
     <string name="display_date_format">DD/MM/YYYY</string>
     <string name="sql_date_format">YYYY-MM-DD</string>
+    <string name="clear">Clear</string>
 </resources>

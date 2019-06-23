@@ -32,7 +32,7 @@
     <style name="Text"></style>
 
     <style name="Text.Header1">
-        <item name="android:textSize">@dimen/normal_200</item>
+        <item name="android:textSize">@dimen/text_size_small_275</item>
     </style>
 
     <style name="Text.Header1.ColorPrimary">
@@ -48,7 +48,7 @@
     </style>
 
     <style name="Text.Header2">
-        <item name="android:textSize">@dimen/normal_175</item>
+        <item name="android:textSize">@dimen/text_size_small_250</item>
     </style>
 
     <style name="Text.Header2.ColorPrimary">
@@ -64,7 +64,7 @@
     </style>
 
     <style name="Text.Header3">
-        <item name="android:textSize">@dimen/normal_150</item>
+        <item name="android:textSize">@dimen/text_size_small_225</item>
     </style>
 
     <style name="Text.Header3.ColorPrimary">
@@ -80,7 +80,7 @@
     </style>
 
     <style name="Text.Header4">
-        <item name="android:textSize">@dimen/normal_125</item>
+        <item name="android:textSize">@dimen/text_size_small_200</item>
     </style>
 
     <style name="Text.Header4.ColorPrimary">
@@ -96,7 +96,7 @@
     </style>
 
     <style name="Text.Body">
-        <item name="android:textSize">@dimen/normal_100</item>
+        <item name="android:textSize">@dimen/text_size_small_175</item>
     </style>
 
     <style name="Text.Body.ColorPrimary">

@@ -1,417 +1,420 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity.EddPregnancyCalculatorActivity">
 
-    <ScrollView
+    <android.support.constraint.ConstraintLayout
+        style="@style/ScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
 
-        <android.support.constraint.ConstraintLayout
-            style="@style/ScrollView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvHeaderEDDCalculator"
+            style="@style/Text.Header4.ColorPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/estimated_date_of_delivery_edd_pregnancy_calculator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tvHeaderEDDCalculator"
-                style="@style/Text.Header4.ColorPrimary"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/estimated_date_of_delivery_edd_pregnancy_calculator"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tvCurrentDate"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/current_date"
+            app:layout_constraintBottom_toBottomOf="@+id/btCurrentDate"
+            app:layout_constraintEnd_toStartOf="@+id/btCurrentDate"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btCurrentDate" />
 
-            <TextView
-                android:id="@+id/tvCurrentDate"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/current_date"
-                app:layout_constraintBottom_toBottomOf="@+id/btCurrentDate"
-                app:layout_constraintEnd_toStartOf="@+id/btCurrentDate"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btCurrentDate" />
+        <Button
+            android:id="@+id/btCurrentDate"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/display_date_format"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrentDate"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeaderEDDCalculator" />
 
-            <Button
-                android:id="@+id/btCurrentDate"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/display_date_format"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvCurrentDate"
-                app:layout_constraintTop_toBottomOf="@+id/tvHeaderEDDCalculator" />
+        <TextView
+            android:id="@+id/tvLastMenstrualPeriod"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/last_menstrual_period"
+            app:layout_constraintBottom_toBottomOf="@+id/btLastMenstrualPeriod"
+            app:layout_constraintEnd_toStartOf="@+id/btLastMenstrualPeriod"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btLastMenstrualPeriod" />
 
-            <TextView
-                android:id="@+id/tvLastMenstrualPeriod"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/last_menstrual_period"
-                app:layout_constraintBottom_toBottomOf="@+id/btLastMenstrualPeriod"
-                app:layout_constraintEnd_toStartOf="@+id/btLastMenstrualPeriod"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btLastMenstrualPeriod" />
+        <Button
+            android:id="@+id/btLastMenstrualPeriod"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/display_date_format"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvLastMenstrualPeriod"
+            app:layout_constraintTop_toBottomOf="@+id/btCurrentDate" />
 
-            <Button
-                android:id="@+id/btLastMenstrualPeriod"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/display_date_format"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvLastMenstrualPeriod"
-                app:layout_constraintTop_toBottomOf="@+id/btCurrentDate" />
+        <!-- Ultrasound -->
+        <TextView
+            android:id="@+id/tvUltraSoundDate"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ultrasound_date"
+            app:layout_constraintBottom_toBottomOf="@+id/btUltraSoundDate"
+            app:layout_constraintEnd_toStartOf="@+id/btUltraSoundDate"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btUltraSoundDate" />
 
-            <!-- Ultrasound -->
-            <TextView
-                android:id="@+id/tvUltraSoundDate"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/ultrasound_date"
-                app:layout_constraintBottom_toBottomOf="@+id/btUltraSoundDate"
-                app:layout_constraintEnd_toStartOf="@+id/btUltraSoundDate"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btUltraSoundDate" />
+        <Button
+            android:id="@+id/btUltraSoundDate"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/display_date_format"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvUltraSoundDate"
+            app:layout_constraintTop_toBottomOf="@+id/btLastMenstrualPeriod" />
 
-            <Button
-                android:id="@+id/btUltraSoundDate"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/display_date_format"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvUltraSoundDate"
-                app:layout_constraintTop_toBottomOf="@+id/btLastMenstrualPeriod" />
+        <TextView
+            android:id="@+id/tvGestationalAgeByUS"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/gestational_age_by_us"
+            app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
+            app:layout_constraintEnd_toStartOf="@+id/etGestationalAgeByUSWeeks"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
 
-            <TextView
-                android:id="@+id/tvGestationalAgeByUS"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/gestational_age_by_us"
-                app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
-                app:layout_constraintEnd_toStartOf="@+id/etGestationalAgeByUSWeeks"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
+        <EditText
+            android:id="@+id/etGestationalAgeByUSWeeks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:gravity="end"
+            android:inputType="number"
+            android:maxLength="3"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toStartOf="@+id/tvGestationalAgeByUSWeeks"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvGestationalAgeByUS"
+            app:layout_constraintTop_toBottomOf="@+id/btUltraSoundDate" />
 
-            <EditText
-                android:id="@+id/etGestationalAgeByUSWeeks"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:gravity="end"
-                android:inputType="number"
-                android:selectAllOnFocus="true"
-                android:maxLength="3"
-                app:layout_constraintEnd_toStartOf="@+id/tvGestationalAgeByUSWeeks"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvGestationalAgeByUS"
-                app:layout_constraintTop_toBottomOf="@+id/btUltraSoundDate" />
+        <TextView
+            android:id="@+id/tvGestationalAgeByUSWeeks"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/weeks"
+            app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
+            app:layout_constraintEnd_toStartOf="@+id/etGestationalAgeByUSDays"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/etGestationalAgeByUSWeeks"
+            app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
 
-            <TextView
-                android:id="@+id/tvGestationalAgeByUSWeeks"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/weeks"
-                app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
-                app:layout_constraintEnd_toStartOf="@+id/etGestationalAgeByUSDays"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/etGestationalAgeByUSWeeks"
-                app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
+        <EditText
+            android:id="@+id/etGestationalAgeByUSDays"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:inputType="number"
+            android:maxLength="4"
+            android:selectAllOnFocus="true"
+            app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
+            app:layout_constraintEnd_toStartOf="@+id/tvGestationalAgeByUSDays"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvGestationalAgeByUSWeeks"
+            app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
 
-            <EditText
-                android:id="@+id/etGestationalAgeByUSDays"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:inputType="number"
-                android:selectAllOnFocus="true"
-                android:maxLength="4"
-                app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
-                app:layout_constraintEnd_toStartOf="@+id/tvGestationalAgeByUSDays"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvGestationalAgeByUSWeeks"
-                app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
+        <TextView
+            android:id="@+id/tvGestationalAgeByUSDays"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/days"
+            app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/etGestationalAgeByUSDays"
+            app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
 
-            <TextView
-                android:id="@+id/tvGestationalAgeByUSDays"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/days"
-                app:layout_constraintBottom_toBottomOf="@+id/etGestationalAgeByUSWeeks"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/etGestationalAgeByUSDays"
-                app:layout_constraintTop_toTopOf="@+id/etGestationalAgeByUSWeeks" />
+        <!-- Embryo -->
+        <TextView
+            android:id="@+id/tvEmbryoTransferDate"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/embryo_transfer_date"
+            app:layout_constraintBottom_toBottomOf="@+id/btEmbryoTransferDate"
+            app:layout_constraintEnd_toStartOf="@+id/btEmbryoTransferDate"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/btEmbryoTransferDate" />
 
-            <!-- Embryo -->
-            <TextView
-                android:id="@+id/tvEmbryoTransferDate"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/embryo_transfer_date"
-                app:layout_constraintBottom_toBottomOf="@+id/btEmbryoTransferDate"
-                app:layout_constraintEnd_toStartOf="@+id/btEmbryoTransferDate"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/btEmbryoTransferDate" />
-
-            <Button
-                android:id="@+id/btEmbryoTransferDate"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:layout_width="0dp"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_height="wrap_content"
-                android:text="@string/display_date_format"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvUltraSoundDate"
-                app:layout_constraintTop_toBottomOf="@+id/etGestationalAgeByUSWeeks" />
+        <Button
+            android:id="@+id/btEmbryoTransferDate"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:text="@string/display_date_format"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvUltraSoundDate"
+            app:layout_constraintTop_toBottomOf="@+id/etGestationalAgeByUSWeeks" />
 
 
-            <TextView
-                android:id="@+id/tvEmbryoAgeAtTransferDate"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/embryo_age_at_transfer_date"
-                app:layout_constraintBottom_toBottomOf="@+id/etEmbryoAgeAtTransferDays"
-                app:layout_constraintEnd_toStartOf="@+id/etEmbryoAgeAtTransferDays"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="4"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etEmbryoAgeAtTransferDays" />
+        <TextView
+            android:id="@+id/tvEmbryoAgeAtTransferDate"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/embryo_age_at_transfer_date"
+            app:layout_constraintBottom_toBottomOf="@+id/etEmbryoAgeAtTransferDays"
+            app:layout_constraintEnd_toStartOf="@+id/etEmbryoAgeAtTransferDays"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etEmbryoAgeAtTransferDays" />
 
-            <EditText
-                android:id="@+id/etEmbryoAgeAtTransferDays"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:gravity="end"
-                android:inputType="number"
-                android:selectAllOnFocus="true"
-                android:maxLength="3"
-                app:layout_constraintEnd_toStartOf="@+id/tvEmbryoAgeAtTransferDateDays"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvEmbryoAgeAtTransferDate"
-                app:layout_constraintTop_toBottomOf="@+id/btEmbryoTransferDate" />
+        <EditText
+            android:id="@+id/etEmbryoAgeAtTransferDays"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:gravity="end"
+            android:inputType="number"
+            android:maxLength="3"
+            android:selectAllOnFocus="true"
+            app:layout_constraintEnd_toStartOf="@+id/tvEmbryoAgeAtTransferDateDays"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvEmbryoAgeAtTransferDate"
+            app:layout_constraintTop_toBottomOf="@+id/btEmbryoTransferDate" />
 
-            <TextView
-                android:id="@+id/tvEmbryoAgeAtTransferDateDays"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/days"
-                app:layout_constraintBottom_toBottomOf="@+id/etEmbryoAgeAtTransferDays"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/etEmbryoAgeAtTransferDays"
-                app:layout_constraintTop_toTopOf="@+id/etEmbryoAgeAtTransferDays" />
+        <TextView
+            android:id="@+id/tvEmbryoAgeAtTransferDateDays"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/days"
+            app:layout_constraintBottom_toBottomOf="@+id/etEmbryoAgeAtTransferDays"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/etEmbryoAgeAtTransferDays"
+            app:layout_constraintTop_toTopOf="@+id/etEmbryoAgeAtTransferDays" />
+        
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/etEmbryoAgeAtTransferDays"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="@string/clear" />
 
-            <!-- Results -->
-            <TextView
-                android:id="@+id/tvHeaderEDDCalculatorResult"
-                style="@style/Text.Header4.ColorPrimary"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/normal_100"
-                android:text="@string/results"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etEmbryoAgeAtTransferDays" />
+        <!-- Results -->
+        <TextView
+            android:id="@+id/tvHeaderEDDCalculatorResult"
+            style="@style/Text.Header4.ColorPrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/results"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btClear" />
 
-            <TextView
-                android:id="@+id/tvCurrentGestationalAgeByLMP"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/current_gestational_age_by_lmp"
-                app:layout_constraintBottom_toBottomOf="@+id/etCurrentGestationalAgeByLMPResult"
-                app:layout_constraintEnd_toStartOf="@+id/etCurrentGestationalAgeByLMPResult"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etCurrentGestationalAgeByLMPResult" />
+        <TextView
+            android:id="@+id/tvCurrentGestationalAgeByLMP"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/current_gestational_age_by_lmp"
+            app:layout_constraintBottom_toBottomOf="@+id/etCurrentGestationalAgeByLMPResult"
+            app:layout_constraintEnd_toStartOf="@+id/etCurrentGestationalAgeByLMPResult"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etCurrentGestationalAgeByLMPResult" />
 
-            <EditText
-                android:id="@+id/etCurrentGestationalAgeByLMPResult"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:clickable="false"
-                android:focusable="false"
-                android:longClickable="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvCurrentGestationalAgeByLMP"
-                app:layout_constraintTop_toBottomOf="@+id/tvHeaderEDDCalculatorResult" />
+        <EditText
+            android:id="@+id/etCurrentGestationalAgeByLMPResult"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrentGestationalAgeByLMP"
+            app:layout_constraintTop_toBottomOf="@+id/tvHeaderEDDCalculatorResult" />
 
-            <TextView
-                android:id="@+id/tvEDDByLMP"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/edd_by_lmp"
-                app:layout_constraintBottom_toBottomOf="@+id/etEDDByLMPResult"
-                app:layout_constraintEnd_toStartOf="@+id/etEDDByLMPResult"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etEDDByLMPResult" />
+        <TextView
+            android:id="@+id/tvEDDByLMP"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/edd_by_lmp"
+            app:layout_constraintBottom_toBottomOf="@+id/etEDDByLMPResult"
+            app:layout_constraintEnd_toStartOf="@+id/etEDDByLMPResult"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etEDDByLMPResult" />
 
-            <EditText
-                android:id="@+id/etEDDByLMPResult"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:clickable="false"
-                android:focusable="false"
-                android:longClickable="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvEDDByLMP"
-                app:layout_constraintTop_toBottomOf="@+id/etCurrentGestationalAgeByLMPResult" />
+        <EditText
+            android:id="@+id/etEDDByLMPResult"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvEDDByLMP"
+            app:layout_constraintTop_toBottomOf="@+id/etCurrentGestationalAgeByLMPResult" />
 
-            <TextView
-                android:id="@+id/tvCurrentGestationalAgeByUS"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/current_gestational_age_by_us"
-                app:layout_constraintBottom_toBottomOf="@+id/etCurrentGestationalAgeByUSResult"
-                app:layout_constraintEnd_toStartOf="@+id/etCurrentGestationalAgeByUSResult"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etCurrentGestationalAgeByUSResult" />
+        <TextView
+            android:id="@+id/tvCurrentGestationalAgeByUS"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/current_gestational_age_by_us"
+            app:layout_constraintBottom_toBottomOf="@+id/etCurrentGestationalAgeByUSResult"
+            app:layout_constraintEnd_toStartOf="@+id/etCurrentGestationalAgeByUSResult"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etCurrentGestationalAgeByUSResult" />
 
-            <EditText
-                android:id="@+id/etCurrentGestationalAgeByUSResult"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:clickable="false"
-                android:focusable="false"
-                android:longClickable="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvCurrentGestationalAgeByUS"
-                app:layout_constraintTop_toBottomOf="@+id/etEDDByLMPResult" />
+        <EditText
+            android:id="@+id/etCurrentGestationalAgeByUSResult"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrentGestationalAgeByUS"
+            app:layout_constraintTop_toBottomOf="@+id/etEDDByLMPResult" />
 
-            <TextView
-                android:id="@+id/tvEDDByUS"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/edd_by_us"
-                app:layout_constraintBottom_toBottomOf="@+id/etEDDByUSResult"
-                app:layout_constraintEnd_toStartOf="@+id/etEDDByUSResult"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etEDDByUSResult" />
+        <TextView
+            android:id="@+id/tvEDDByUS"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/edd_by_us"
+            app:layout_constraintBottom_toBottomOf="@+id/etEDDByUSResult"
+            app:layout_constraintEnd_toStartOf="@+id/etEDDByUSResult"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etEDDByUSResult" />
 
-            <EditText
-                android:id="@+id/etEDDByUSResult"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:clickable="false"
-                android:focusable="false"
-                android:longClickable="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvEDDByUS"
-                app:layout_constraintTop_toBottomOf="@+id/etCurrentGestationalAgeByUSResult" />
+        <EditText
+            android:id="@+id/etEDDByUSResult"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvEDDByUS"
+            app:layout_constraintTop_toBottomOf="@+id/etCurrentGestationalAgeByUSResult" />
 
-            <TextView
-                android:id="@+id/tvCurrentEmbryoAge"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/current_gestational_age_by_embryo"
-                app:layout_constraintBottom_toBottomOf="@+id/etCurrentGestationalAgeByEmbryoResult"
-                app:layout_constraintEnd_toStartOf="@+id/etCurrentGestationalAgeByEmbryoResult"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etCurrentGestationalAgeByEmbryoResult" />
+        <TextView
+            android:id="@+id/tvCurrentEmbryoAge"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/current_gestational_age_by_embryo"
+            app:layout_constraintBottom_toBottomOf="@+id/etCurrentGestationalAgeByEmbryoResult"
+            app:layout_constraintEnd_toStartOf="@+id/etCurrentGestationalAgeByEmbryoResult"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etCurrentGestationalAgeByEmbryoResult" />
 
-            <EditText
-                android:id="@+id/etCurrentGestationalAgeByEmbryoResult"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:clickable="false"
-                android:focusable="false"
-                android:longClickable="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvCurrentEmbryoAge"
-                app:layout_constraintTop_toBottomOf="@+id/etEDDByUSResult" />
+        <EditText
+            android:id="@+id/etCurrentGestationalAgeByEmbryoResult"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvCurrentEmbryoAge"
+            app:layout_constraintTop_toBottomOf="@+id/etEDDByUSResult" />
 
-            <TextView
-                android:id="@+id/tvEDDByEmbryo"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="@string/edd_by_embryo"
-                app:layout_constraintBottom_toBottomOf="@+id/etEDDByEmbryoResult"
-                app:layout_constraintEnd_toStartOf="@+id/etEDDByEmbryoResult"
-                app:layout_constraintHorizontal_chainStyle="spread"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/etEDDByEmbryoResult" />
+        <TextView
+            android:id="@+id/tvEDDByEmbryo"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/edd_by_embryo"
+            app:layout_constraintBottom_toBottomOf="@+id/etEDDByEmbryoResult"
+            app:layout_constraintEnd_toStartOf="@+id/etEDDByEmbryoResult"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etEDDByEmbryoResult" />
 
-            <EditText
-                android:id="@+id/etEDDByEmbryoResult"
-                style="@style/Text.Body.BlackOverlay"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/small_100"
-                android:layout_marginBottom="@dimen/small_100"
-                android:clickable="false"
-                android:focusable="false"
-                android:longClickable="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_weight="1"
-                app:layout_constraintStart_toEndOf="@+id/tvEDDByEmbryo"
-                app:layout_constraintTop_toBottomOf="@+id/etCurrentGestationalAgeByEmbryoResult" />
+        <EditText
+            android:id="@+id/etEDDByEmbryoResult"
+            style="@style/Text.Body.BlackOverlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_100"
+            android:layout_marginBottom="@dimen/small_100"
+            android:clickable="false"
+            android:focusable="false"
+            android:longClickable="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/tvEDDByEmbryo"
+            app:layout_constraintTop_toBottomOf="@+id/etCurrentGestationalAgeByEmbryoResult" />
 
-        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
 
-    </ScrollView>
-
-</android.support.constraint.ConstraintLayout>
+</ScrollView>

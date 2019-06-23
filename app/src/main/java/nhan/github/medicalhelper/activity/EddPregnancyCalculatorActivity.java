@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.AppCompatButton;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -25,6 +26,7 @@ public class EddPregnancyCalculatorActivity extends AppCompatActivity
     Button btLastMenstrualPeriod;
     Button btUltraSoundDate;
     Button btEmbryoTransferDate;
+    AppCompatButton btClear;
     EditText etGestationalAgeByUSWeeks;
     EditText etGestationalAgeByUSDays;
     EditText etEmbryoAgeAtTransferDays;
@@ -44,6 +46,7 @@ public class EddPregnancyCalculatorActivity extends AppCompatActivity
         btLastMenstrualPeriod = findViewById(R.id.btLastMenstrualPeriod);
         btUltraSoundDate = findViewById(R.id.btUltraSoundDate);
         btEmbryoTransferDate = findViewById(R.id.btEmbryoTransferDate);
+        btClear = findViewById(R.id.btClear);
         etGestationalAgeByUSWeeks = findViewById(R.id.etGestationalAgeByUSWeeks);
         etGestationalAgeByUSDays = findViewById(R.id.etGestationalAgeByUSDays);
         etEmbryoAgeAtTransferDays = findViewById(R.id.etEmbryoAgeAtTransferDays);
@@ -129,8 +132,32 @@ public class EddPregnancyCalculatorActivity extends AppCompatActivity
 
             }
         });
+        btClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initViewContent();
+            }
+        });
 
+        initViewContent();
+    }
+
+    private void initViewContent() {
+        // Input Fields
         btCurrentDate.setText(DateTimeUtil.calendarToDisplayDate(Calendar.getInstance()));
+        btLastMenstrualPeriod.setText(getString(R.string.display_date_format));
+        btUltraSoundDate.setText(getString(R.string.display_date_format));
+        etGestationalAgeByUSWeeks.setText(null);
+        etGestationalAgeByUSDays.setText(null);
+        btEmbryoTransferDate.setText(getString(R.string.display_date_format));
+        etEmbryoAgeAtTransferDays.setText(null);
+        // View Fields
+        etCurrentGestationalAgeByLMPResult.setText(null);
+        etEDDByLMPResult.setText(null);
+        etCurrentGestationalAgeByUSResult.setText(null);
+        etEDDByUSResult.setText(null);
+        etCurrentGestationalAgeByEmbryoResult.setText(null);
+        etEDDByEmbryoResult.setText(null);
     }
 
     private void showDatePickerDialog(View v, String tag) {
